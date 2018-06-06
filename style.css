@@ -3,3 +3,7 @@ body {
     text-align: center;
     font-size: 40px;
 }
+h1 {
+    font-style: italic;
+    text-decoration: underline fuchsia;
+}
