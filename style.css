@@ -1,9 +1,11 @@
 body {
-    background-color: rgb(244, 247, 70);
+    background-color: #ffe521;
     text-align: center;
     font-size: 40px;
 }
 h1 {
     font-style: italic;
-    text-decoration: underline fuchsia;
+    text-decoration: underline #ff009e;
+    color: black;
+    text-shadow: #56f89a 5px 5px;
 }
