@@ -9,3 +9,10 @@ h1 {
     color: black;
     text-shadow: #56f89a 5px 5px;
 }
+img {
+    background-color: aliceblue;
+    float: inherit;
+    position: relative;
+    top: -180px;
+    align-content: center;
+}
