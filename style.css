@@ -1,7 +1,11 @@
 body {
-    background-color: #ffe521;
+    background-color: azure;
     text-align: center;
     font-style: italic;
+    font-family: 'Bitter', serif;
+}
+#header {
+    background-color: #ffe521;
 }
 img {
     background-color: aliceblue;
@@ -11,7 +15,6 @@ img {
     align-content: center;
 }
 h1 {
-    font-style: italic;
     text-decoration: underline #ff009e;
     color: black;
     text-shadow: #56f89a 5px 5px;
@@ -19,27 +22,65 @@ h1 {
 
 }
 table {
+    display: block;
     color: black;
+    border: 1px black;
 }
 td {
 font-style: italic;
 color: initial;
 font-size: 40px;
 text-align: left;
+background-color: #ffe521;
 }
-div.carousel {
+h2 {
+    background-color: #ffe521;
+}
+/*div.carousel {
     display: block;
     width: 40px;
-}
+}*/
 #f1 {
     width: 500px;
 }
-#f2 {
+/*#f2 {
     width: 500px;
 }
 #f3 {
     width: 500px;
+}*/
+#Logeo {
+    background-color: rgb(245, 233, 164);
+    display: block;
+    position: relative;
+    float: right;
+    top: -200px;
+    right: 30px;
+    box-sizing: content-box;
+    font-size: 30px;
 }
-@media not all, (-webkit-transform-3d){
-    
+#grafico {
+    background-image: url(http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645395-27537452-261x174-1-9-BmNCpapQNZYw5G40.jpeg); 
+    /*opacity: 0.5;*/
+    display: block;
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 70%;
+    right: 300px;
+    top: -200px;
+    text-shadow: #ffe521 2px 2px;
 }
+ul {
+    list-style:none;
+    block-size: 300%;
+    display: block;
+    box-sizing: content-box;
+}
+li {
+    font-size: 30px;
+    color: black;
+    background-color: #ffe521;
+    opacity: 0.8;
+}
+
