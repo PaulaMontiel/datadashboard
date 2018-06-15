@@ -4,22 +4,12 @@ body {
     font-style: italic;
     font-family: 'Bitter', serif;
 }
-#header {
-    background-color: #ffe521;
-}
 img {
     background-color: white;
     float: inherit;
     position: relative;
     align-content: center;
     font-family: inherit;
-}
-h1 {
-    text-decoration: underline #ff009e;
-    color: black;
-    text-shadow: #56f89a 5px 5px;
-    font-size: 80px;
-
 }
 table {
     display: block;
@@ -33,34 +23,10 @@ font-size: 40px;
 text-align: left;
 background-color: #ffe521;
 }
-h2 {
-   text-align: center;
-}
-/*div.carousel {
-    display: block;
-    width: 40px;
-}*/
-#f1 {
-    width: 500px;
-}
-/*#f2 {
-    width: 500px;
-}
-#f3 {
-    width: 500px;
-}*/
-#Logeo {
-    background-color: rgb(245, 233, 164);
-    display: block;
-    position: relative;
-    float: right;
-    top: -200px;
-    right: 30px;
-    box-sizing: content-box;
-    font-size: 30px;
-}
-#bg {
-    background-image: url(http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645395-27537452-261x174-1-9-BmNCpapQNZYw5G40.jpeg) no-repeat center center fixed;
+h1 {
+    text-align: center;
+   padding-left:20%;
+   padding-top: 2%;
 }
 ul {
     list-style:none;
@@ -120,4 +86,11 @@ li {
 }
 .margin-bottom-green{
     margin-bottom: 5px solid #56F89A;
+}
+.clock{
+ position: right;
+}
+
+.container{
+    height: 11em;
 }
