@@ -1,5 +1,5 @@
 body {
-    background-color: azure;
+    background-color: white;
     text-align: center;
     font-style: italic;
     font-family: 'Bitter', serif;
@@ -8,10 +8,9 @@ body {
     background-color: #ffe521;
 }
 img {
-    background-color: aliceblue;
+    background-color: white;
     float: inherit;
     position: relative;
-    top: 30px;
     align-content: center;
     font-family: inherit;
 }
@@ -35,7 +34,7 @@ text-align: left;
 background-color: #ffe521;
 }
 h2 {
-    background-color: #ffe521;
+   text-align: center;
 }
 /*div.carousel {
     display: block;
@@ -60,17 +59,8 @@ h2 {
     box-sizing: content-box;
     font-size: 30px;
 }
-#grafico {
-    background-image: url(http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645395-27537452-261x174-1-9-BmNCpapQNZYw5G40.jpeg); 
-    /*opacity: 0.5;*/
-    display: block;
-    position: relative;
-    float: right;
-    width: 50%;
-    height: 70%;
-    right: 300px;
-    top: -200px;
-    text-shadow: #ffe521 2px 2px;
+#bg {
+    background-image: url(http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645395-27537452-261x174-1-9-BmNCpapQNZYw5G40.jpeg) no-repeat center center fixed;
 }
 ul {
     list-style:none;
@@ -85,3 +75,49 @@ li {
     opacity: 0.8;
 }
 
+.menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffe521;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.menu img{
+    max-width: 150px;
+}
+
+.menu a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .menu {padding-top: 15px;}
+  .menu a {font-size: 18px;}
+}
+.col-center{
+     float: none;
+    margin: 0 auto;
+}
+.margin-bottom-pink{
+    margin-bottom: 1em solid #ff009e;
+}
+.margin-bottom-green{
+    margin-bottom: 5px solid #56F89A;
+}
