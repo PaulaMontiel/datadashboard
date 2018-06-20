@@ -1,26 +1,36 @@
-/*const alumnas = localStorage.getItem(conectJson);
-const JSON = JSON.parse(alumnas);
-//["id", "signupCohort", "timezone", "name", "locale", "role"];
-console.log(conectJson + JSON.parse(alumnas));*/
- 
-const usersJson = "../../data/cohorts/lim-2018-03-pre-core-pw/users.json";
-const alumnas = localStorage.getItem(usersJson);
-let progress = "";
-let cohorts = "";
-
-fetch(usersJson)
+function btnSedes() {
+    fetch("../../data/cohorts/lim-2018-03-pre-core-pw/users.json")
 .then (Response => Response.json())
 .then(data => {
     console.log(data);
-    document.getElementsByTagName("#alumnas")
-    renderUsers(data)
+    tabla1(data)
 })
+} 
 
-const renderUsers = data => {
-    
-    //document.getElementsByTagName("#alumnas")
-const render = data.forEach(element => {
-    return console.log += `<p>${element.name}</p>`
-});
-return render;    
+function tabla1(data){
+    console.log(data)
 }
+
+function btnAlumnas() {
+    fetch("../../data/cohorts.json")
+.then (Response => Response.json())
+.then(data => {
+    console.log(data);
+})
+}
+
+function btnAvances() {
+    fetch("../../data/cohorts/lim-2018-03-pre-core-pw/progress.json")
+    .then (Response => Response.json())
+    .then(data => {
+        console.log(data);
+    })   
+}
+
+/*const usersJson = 
+let users = "";
+const cohortsJson = "../../data/cohorts.json"
+let cohorts = "";
+const progressJson= "../../data/cohorts/lim-2018-03-pre-core-pw/progress.json"
+let progress = "";*/
+
