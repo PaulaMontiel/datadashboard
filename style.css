@@ -24,8 +24,8 @@ text-align: left;
 background-color: #ffe521;
 }
 h1 {
-    text-align: center;
-   padding-left:20%;
+   text-align: center;
+   padding-left:30%;
    padding-top: 2%;
 }
 ul {
@@ -93,4 +93,17 @@ li {
 
 .container{
     height: 11em;
+}
+h2{
+    text-align: center;
+}
+
+#bg2{
+    display: none;
+}
+#bg3{
+    display: none;
+}
+#bg4{
+    display: none;
 }
