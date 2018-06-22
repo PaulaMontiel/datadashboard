@@ -1,3 +1,4 @@
+
 body {
     background-color: white;
     text-align: center;
@@ -24,8 +25,8 @@ text-align: left;
 background-color: #ffe521;
 }
 h1 {
-    text-align: center;
-   padding-left:20%;
+   text-align: center;
+   padding-left:30%;
    padding-top: 2%;
 }
 ul {
@@ -51,6 +52,7 @@ li {
     background-color: #ffe521;
     overflow-x: hidden;
     padding-top: 20px;
+    color: white;
 }
 
 .menu img{
@@ -58,15 +60,16 @@ li {
 }
 
 .menu a {
-    padding: 6px 6px 6px 32px;
+    text-align: center;
+    padding: 6px 12px 6px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 15px;
+    color: white;
     display: block;
 }
 
 .menu a:hover {
-    color: #f1f1f1;
+    color: #FF009E;
 }
 
 .main {
@@ -75,7 +78,7 @@ li {
 
 @media screen and (max-height: 450px) {
   .menu {padding-top: 15px;}
-  .menu a {font-size: 18px;}
+  .menu a {font-size: 15px;}
 }
 .col-center{
      float: none;
@@ -100,4 +103,25 @@ li {
  box-sizing: content-box;
  position: relative;
  size: content-box;
+  
+h2{
+    text-align: center;
+}
+
+#bg2{
+    display: none;
+}
+#bg3{
+    display: none;
+}
+#bg4{
+    display: none;
+}
+button{
+    color: white;
+    background-color: #ffe526 !important;
+    border: none !important;
+}
+.sedes{
+    font-size: 17px;
 }

@@ -1,3 +1,52 @@
+window.onload const computeUsersStats= Promise.all([   //Ejecuta todas las llamadas de manera paralela
+    fetch("../data/cohorts/cohorts.json"),
+    fetch("../data/cohorts/lim-2018-03-pre-core-pw/progress.json"),
+    fetch("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
+    
+]).then(
+    (responses)=>{   //Responde a todas las promesas
+        return Promise.all(responses.map((response)=>{
+           return response.json();                
+        }));                        
+    }
+).then((responseJsons)=>{ //Arreglo de respuestas en json
+    console.log(responseJsonss);
+     
+    /*
+     * Código que ocupa los jsons...
+     */
+}).catch(
+    (error)=>{ // Al menos una llamada falló
+
+    }
+);
+console.log(computeUsersStats);
+
+
+
+function mostrar(id){
+    if(id=='bg'){
+        document.getElementById('bg').style.display = "block";
+        document.getElementById('bg2').style.display = "none";
+        document.getElementById('bg3').style.display = "none";
+        document.getElementById('bg4').style.display = "none";
+    }else if(id=='bg2'){
+        document.getElementById('bg').style.display = "none";
+        document.getElementById('bg2').style.display = "block";
+        document.getElementById('bg3').style.display = "none";
+        document.getElementById('bg4').style.display = "none";
+    }else if(id=='bg3'){
+        document.getElementById('bg').style.display = "none";
+        document.getElementById('bg2').style.display = "none";
+        document.getElementById('bg3').style.display = "block";
+        document.getElementById('bg4').style.display = "none";
+    }else{
+        document.getElementById('bg').style.display = "none";
+        document.getElementById('bg2').style.display = "none";
+        document.getElementById('bg3').style.display = "none";
+        document.getElementById('bg4').style.display = "block";
+    }
+}
 function btnSedes() {
     document.getElementById("bg").style.display = "none";
     document.getElementById("tabla").style.visibility = "visible";
@@ -66,4 +115,9 @@ const cohortsJson = "../../data/cohorts.json"
 let cohorts = "";
 const progressJson= "../../data/cohorts/lim-2018-03-pre-core-pw/progress.json"
 let progress = "";*/
+
+
+
+
+
 
