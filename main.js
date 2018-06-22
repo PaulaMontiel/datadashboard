@@ -21,7 +21,7 @@ window.onload const computeUsersStats= Promise.all([   //Ejecuta todas las llama
     }
 );
 console.log(computeUsersStats);
-
+/*comentario de prueba*/
 
 
 function mostrar(id){
