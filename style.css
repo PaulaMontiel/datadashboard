@@ -1,3 +1,4 @@
+
 body {
     background-color: white;
     text-align: center;
@@ -51,6 +52,7 @@ li {
     background-color: #ffe521;
     overflow-x: hidden;
     padding-top: 20px;
+    color: white;
 }
 
 .menu img{
@@ -58,15 +60,16 @@ li {
 }
 
 .menu a {
-    padding: 6px 6px 6px 32px;
+    text-align: center;
+    padding: 6px 12px 6px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 15px;
+    color: white;
     display: block;
 }
 
 .menu a:hover {
-    color: #f1f1f1;
+    color: #FF009E;
 }
 
 .main {
@@ -75,7 +78,7 @@ li {
 
 @media screen and (max-height: 450px) {
   .menu {padding-top: 15px;}
-  .menu a {font-size: 18px;}
+  .menu a {font-size: 15px;}
 }
 .col-center{
      float: none;
@@ -106,4 +109,12 @@ h2{
 }
 #bg4{
     display: none;
+}
+button{
+    color: white;
+    background-color: #ffe526 !important;
+    border: none !important;
+}
+.sedes{
+    font-size: 17px;
 }

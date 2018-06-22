@@ -9,15 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
   <body>
-    <div class="menu">
+    <div class="menu text-center">
       <img src="img/isotipo.png" alt="logo">
       <a href="#" onclick="mostrar('bg')">Inicio</a>
-      <a href="#" onclick="mostrar('bg2')">Alumnas</a>
-      <a href="#" onclick="mostrar('bg3')">Avances</a>
-      <a href="#" onclick="mostrar('bg4')">Sedes</a>
+          <div class="sedes"> Sedes
+            <a  href="#" onclick="mostrar('bg2')">Lima, Perú.</a>
+            <a  href="#" onclick="mostrar('bg3')">CDMX, México.</a>
+            <a  href="#" onclick="mostrar('bg4')">Santiago, Chile.</a>
+            <a  href="#" onclick="mostrar()">Guadalajara, México.</a>
+          </div>
+      </div>
     </div>
     <div class="main" id="bg" >
-      <section>
         <div class="container"> 
           <div class="row">
             <div class="col-12 col-md-12">
@@ -26,7 +29,6 @@
             </div>
           </div>
         </div>
-      </section>
       <div class="col-8 col-md-8s col-center">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
