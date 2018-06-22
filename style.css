@@ -45,7 +45,7 @@ li {
 .menu {
     height: 100%;
     width: 200px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
@@ -97,6 +97,13 @@ li {
 .container{
     height: 11em;
 }
+#tabla {
+ display: block;
+ visibility: hidden;
+ box-sizing: content-box;
+ position: relative;
+ size: content-box;
+  
 h2{
     text-align: center;
 }
