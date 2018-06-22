@@ -8,7 +8,6 @@ function btnSedes() {
     tabla1(data)
 })
  
-
 function tabla1(data){
     //console.log(data)
     document.getElementById("contenido").innerHTML = ""
@@ -27,10 +26,29 @@ function tabla1(data){
 }
 }
 function btnAlumnas() {
-    fetch("../../data/cohorts.json")
+/*    fetch("../../data/cohorts.json")
 .then (Response => Response.json())
 .then(data => {
     console.log(data);
+    tabla1(data)
+})*/
+const data = window.all.todillo(respuesta);
+ document.getElementsByTagName("a")[1] = data;
+tabla1(data => {
+    //console.log(data)
+    document.getElementById("contenido").innerHTML = ""
+    for(let valor of data){
+       // console.log(valor)
+       document.getElementById("contenido").innerHTML += `
+       
+       <tr>
+            <th scope="row">${valor.name}</th>
+            <td>${valor.id}</td>
+            <td>${valor.signupCohort}</td>
+            <td>${valor.timezone}</td>
+          </tr>
+       `
+    }
 })
 }
 

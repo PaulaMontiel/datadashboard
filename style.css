@@ -99,4 +99,5 @@ li {
  visibility: hidden;
  box-sizing: content-box;
  position: relative;
+ size: content-box;
 }
