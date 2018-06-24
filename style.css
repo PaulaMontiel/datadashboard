@@ -17,13 +17,6 @@ table {
     color: black;
     border: 1px black;
 }
-td {
-font-style: italic;
-color: initial;
-font-size: 40px;
-text-align: left;
-background-color: #ffe521;
-}
 h1 {
    text-align: center;
    padding-left:30%;
@@ -60,7 +53,6 @@ li {
 }
 
 .menu a {
-    text-align: center;
     padding: 6px 12px 6px 32px;
     text-decoration: none;
     font-size: 15px;
@@ -103,19 +95,21 @@ li {
  box-sizing: content-box;
  position: relative;
  size: content-box;
-  
+}
 h2{
     text-align: center;
+}
+h4 {
+    padding: 8px;
+    color: #3e3737;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
 }
 
 #bg2{
     display: none;
-}
-#bg3{
-    display: none;
-}
-#bg4{
-    display: none;
+    color: black;
 }
 button{
     color: white;
@@ -124,4 +118,46 @@ button{
 }
 .sedes{
     font-size: 17px;
+}
+form {
+    margin-top: 3em;
+    display: inline-block;
+}
+#formulario {
+    text-align: center;
+}
+#formulario h1{
+    text-align: left;
+}
+#tabla-alumnas{
+    background-color: white;
+    font-size: 17px;
+}
+.tituloTabla {
+    border-top-right-radius: 10px;
+    background: #ffe526;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+#students {
+    overflow: scroll;
+    max-height: 600px;
+    border: 1px solid #f3f3f2;
+    padding: 0px;
+}
+
+.estudiante1 {
+    background: #ffffff;
+}
+
+.estudiante2 {
+    background: #f5f4f4;
+}
+
+.spanHeaderStudents {
+    font-size: 14px;
 }
