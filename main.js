@@ -1,30 +1,38 @@
-window.onload const computeUsersStats= Promise.all([   //Ejecuta todas las llamadas de manera paralela
-    fetch("../data/cohorts/cohorts.json"),
+    Promise.all ([
+        fetch("../../data/cohorts/lim-2018-03-pre-core-pw/users.json"),
+        fetch("../../data/cohorts.json"),
+        fetch("../../data/cohorts/lim-2018-03-pre-core-pw/progress.json")
+    ]).then((Responses) => {
+        return Promise.all(Responses.map((Response) => {
+            return Response.json();
+    }));
+    }  
+    ).then((ResponseJsons) => {
+      console.log(ResponseJsons);
+    })
+    
+ /*Promise.all([   //Ejecuta todas las llamadas de manera paralela
+    fetch("../../data/cohorts.json"),
     fetch("../data/cohorts/lim-2018-03-pre-core-pw/progress.json"),
     fetch("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
     
-]).then(
-    (responses)=>{   //Responde a todas las promesas
+])
+.then((responses) =>{   //Responde a todas las promesas
         return Promise.all(responses.map((response)=>{
-           return response.json();                
+           return (response.json());                
         }));                        
+    })
+    .then(responseJsons) => { //Arreglo de respuestas en json
+    console.log(responseJsonss)
     }
-).then((responseJsons)=>{ //Arreglo de respuestas en json
-    console.log(responseJsonss);
-     
+    
     /*
      * Código que ocupa los jsons...
      */
-}).catch(
-    (error)=>{ // Al menos una llamada falló
-
-    }
-);
-console.log(computeUsersStats);
-/*comentario de prueba*/
 
 
-function mostrar(id){
+
+/*function mostrar(id){
     if(id=='bg'){
         document.getElementById('bg').style.display = "block";
         document.getElementById('bg2').style.display = "none";
@@ -47,7 +55,7 @@ function mostrar(id){
         document.getElementById('bg4').style.display = "block";
     }
 }
-function btnSedes() {
+/*function btnSedes() {
     document.getElementById("bg").style.display = "none";
     document.getElementById("tabla").style.visibility = "visible";
     fetch("../../data/cohorts/lim-2018-03-pre-core-pw/users.json")
@@ -81,7 +89,7 @@ function btnAlumnas() {
     console.log(data);
     tabla1(data)
 })*/
-const data = window.all.todillo(respuesta);
+/*const data = window.all.todillo(respuesta);
  document.getElementsByTagName("a")[1] = data;
 tabla1(data => {
     //console.log(data)
@@ -115,9 +123,3 @@ const cohortsJson = "../../data/cohorts.json"
 let cohorts = "";
 const progressJson= "../../data/cohorts/lim-2018-03-pre-core-pw/progress.json"
 let progress = "";*/
-
-
-
-
-
-

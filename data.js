@@ -1,30 +1,24 @@
+/*
+window.computeUsersStats = {
 
-/*window.all = {
+computeUsersStats: (users, progress, courses) => {
 
-todillo: (respuesta) => {
-    const users = "../../data/cohorts/lim-2018-03-pre-core-pw/users.json"
-    const cohorts = "../../data/cohorts.json"
-    const progress = "../../data/cohorts/lim-2018-03-pre-core-pw/progress.json"
+    for (let i = 0; i < users.lenght; i++) {
+        let usersId = users[i].id;
+        let progress = progress[usersId];
+        users[i] = {
+            ...users[i],
+              stats {[
+                percent = 0;
+                reads = 0;
+                total = 0;
+                completed = 0;
 
- fetch(users)
- .then(answ => answ.json())
- .then(info => {
-     renderUsers(info)
- })
+            }
+        }
+    }
 
- fetch(cohorts)
- .then(answ => answ.json())
- .then(info => {
-     renderCohorts(info)
- })
-
- fetch(progress)
- .then(answ => answ.json())
- .then(info => {
-     renderProgress(info)
- })
-
- const renderUsers = info => {
+ /*const renderUsers = info => {
      return new promise (info)
  }
  const renderCohorts = info => {
@@ -39,7 +33,7 @@ promise.all([renderUsers, renderCohorts, renderProgress])
 return console.log(respuesta);
 }
 
-}*/
+}
    const computeUsersStats= Promise.all([   //Ejecuta todas las llamadas de manera paralela
         fetch("../data/cohorts/cohorts.json"),
         fetch("../data/cohorts/lim-2018-03-pre-core-pw/progress.json"),
@@ -52,12 +46,11 @@ return console.log(respuesta);
             }));                        
         }
     ).then((responseJsons)=>{ //Arreglo de respuestas en json
-         /*
-         * Código que ocupa los jsons...
-         */
+         // Código que ocupa los jsons...
+         
     }).catch(
         (error)=>{ // Al menos una llamada falló
 
         }
     );
-console.log(computeUsersStats);
+console.log(computeUsersStats);*/
