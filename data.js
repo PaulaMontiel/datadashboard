@@ -1,3 +1,4 @@
+
 /*window.computeUsersStats = {
 
 computeUsersStats: (users, progress, courses) => {
@@ -14,9 +15,9 @@ computeUsersStats: (users, progress, courses) => {
                 total = 0,
                 completed = 0,
                 }
-            }
-        }
-    }}*/
+            }*/
+
+
     function mostrar(id){
         if(id=='bg'){
             document.getElementById('bg').style.display = "block";
