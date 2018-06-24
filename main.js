@@ -11,11 +11,58 @@ Promise.all ([
          //console.log(ResponseJsons);
         let alumnas = ResponseJsons[0];//entramos al array de users
         //console.log(alumnas);
-        for (let i= 0; i < alumnas.length; ++i){
-            let usersId = alumnas[i].id;
-            console.log(usersId);
+        for(let valor of alumnas){
+            alumId = alumnas.id += alumnas.name; 
+        let usersId = valor.name + " " + valor.id;//devuelve el nombre y el id juntos
+        let usersProg = usersId += ResponseJsons[2]; //devuelve nombre, id y object de progress
+        //console.log(usersProg)
+        tabla(usersProg)
+
+    }})
+        function tabla(usersProg) {
+            console.log(usersProg)
+        }
+     /*document.getElementById("contenido").innerHTML = ""
+            for(let valor of usersProg){
+                console.log(valor)
+               document.getElementById("contenido").innerHTML += `
+               
+               <tr>
+                    <th scope="row">${valor.name}</th>
+                    <td>${valor.completedUnits} de 3 </td>
+                    <td>${valor.signupCohort}</td>
+                    <td>${valor.timezone}</td>
+                  </tr>
+              `
+            }
+        }    
+         
+    
+    
+       /* for (let i= 0; i < alumnas.length; ++i){
+              alumnasIds = alumnas[i].id += ResponseJsons[2];
+               tabla(alumnasIds)
+              //console.log(alumnasIds);
+        }})
+         function tabla(alumnasIds) {
+                console.log(alumnasIds)
+         }/*document.getElementById("contenido").innerHTML = ""
+                for(let valor of alumnasIds){
+                  /*  console.log(valor)
+                   document.getElementById("contenido").innerHTML += `
+                   
+                   <tr>
+                        <th scope="row">${valor.name}</th>
+                        <td>${valor.id}</td>
+                        <td>${valor.signupCohort}</td>
+                        <td>${valor.timezone}</td>
+                      </tr>
+                  `
+                }
+            
+              
         } 
-        })	
+        	
         
         
       
