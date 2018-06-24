@@ -8,26 +8,20 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
   <body>
-    <div class="menu text-center">
+    <div class="menu">
       <img src="img/isotipo.png" alt="logo">
       <a href="#" onclick="mostrar('bg')">Inicio</a>
-          <div class="sedes"> Sedes
-            <a  href="#" onclick="mostrar('bg2')">Lima, Perú.</a>
-            <a  href="#" onclick="mostrar('bg3')">CDMX, México.</a>
-            <a  href="#" onclick="mostrar('bg4')">Santiago, Chile.</a>
-            <a  href="#" onclick="mostrar()">Guadalajara, México.</a>
-          </div>
-      </div>
+      <a href="#" onclick="mostrar('bg2')">Búsqueda de cursos</a>
     </div>
     <div class="main" id="bg" >
-        <div class="container"> 
-          <div class="row">
-            <div class="col-12 col-md-12">
-              <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FSantiago" frameborder="0" seamless align="right"></iframe> 
-              <h1>Bienvenid@</h1>
-            </div>
+      <div class="container"> 
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FSantiago" frameborder="0" seamless align="right"></iframe> 
+            <h1>Bienvenid@</h1>
           </div>
         </div>
+      </div>
       <div class="col-8 col-md-8s col-center">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -48,9 +42,10 @@
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
+          </a>
+        </div>
       </div>
-      </div>
+
      </div>
     <div id="bg2">
 
@@ -59,11 +54,51 @@
 
       <h1>Soy el segundo div</h1>
     </div>
-    <div id="bg3">
-      <h1>Soy el tercer div</h1>
-    </div>
-    <div id="bg4">
-      <h1>Soy el cuarto div</h1>
+    <div id="bg2">
+      <section class="container">
+        <div class="col-8 col-md-8s col-center" id="formulario">
+          <h1>Seleccione el curso</h1>
+          <form id="form" method="POST">
+            <select  id="cursos" class="select">
+              <option>Seleccione un curso</option>
+            </select>
+          </form>
+        </div>
+      </section>
+      <!-- Estudiantes -->
+      <section class="container">
+        <!-- Encabezado de estudiantes -->
+        <div class="row">
+          <div class="col-10 col-md-10s col-center tituloTabla">
+            <div class="row">
+              <div class="col-md-2">
+                <span>Nombre</span>
+              </div>
+              <div class="col-2 col-md-2 center">
+                <span class="spanHeaderStudents">Porcentaje Total Completitud</span>
+              </div>
+              <div class="col-2 col-md-2 center">
+                <span class="spanHeaderStudents">Porcentaje Ejercicios Completados</span>
+              </div>
+              <div class="col-2 col-md-2 center">
+                <span class="spanHeaderStudents">Puntuación Promedio Quizzes</span>
+              </div>
+              <div class="col-2 col-md-2 center">
+                <span class="spanHeaderStudents">Porcentaje Quizzes</span>
+              </div>
+              <div class="col-2 col-md-2 center">
+                <span class="spanHeaderStudents">Porcentaje Reads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Lista de estudiantes -->
+        <div class="row">
+          <div class="col-10 col-md-10s col-center" >
+            <div class="row" id="students"></div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <table class="table">
