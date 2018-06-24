@@ -99,12 +99,11 @@ li {
 h2{
     text-align: center;
 }
-h4 {
+h6 {
     padding: 8px;
     color: #3e3737;
     display: inline-block;
     font-weight: normal;
-    font-size: 14px;
 }
 
 #bg2{
@@ -160,4 +159,9 @@ form {
 
 .spanHeaderStudents {
     font-size: 14px;
+}
+.progress-bar{
+    display: inline-block;
+    padding: 8px;
+    width: 40px;
 }

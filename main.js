@@ -1,68 +1,3 @@
-Promise.all([
-    fetch("../../data/cohorts/lim-2018-03-pre-core-pw/users.json"),
-    fetch("../../data/cohorts.json"),
-    fetch("../../data/cohorts/lim-2018-03-pre-core-pw/progress.json")
-]).then((Responses) => {
-    return Promise.all(Responses.map((Response) => {
-        return Response.json();
-    }));
-}
-).then((ResponseJsons) => {	//tengo toda la informacion en responsejsons
-    //console.log(ResponseJsons);
-    let alumnas = ResponseJsons[0];//entramos al array de users
-    //console.log(alumnas);
-    for (let valor of alumnas) {
-        alumId = alumnas.id += alumnas.name;
-        let usersId = valor.name + " " + valor.id;//devuelve el nombre y el id juntos
-        let usersProg = usersId += ResponseJsons[2]; //devuelve nombre, id y object de progress
-        //console.log(usersProg)
-        tabla(usersProg)
-
-    }
-})
-function tabla(usersProg) {
-    usersProg = JSON.stringify(usersProg);
-    // console.log(usersProg);
-
-document.getElementById("contenido").innerHTML = ""
-for(let valor of usersProg){
-    console.log(valor);
-    
-    document.getElementById("contenido").innerHTML += `
-                
-                <tr>
-                     <th scope="row">${valor.name}</th>
-                     <td>${valor.completedUnits} de 3 </td>
-                     <td>${valor.signupCohort}</td>
-                     <td>${valor.timezone}</td>
-                   </tr>
-            })
-               
-            
-function mostrar(id) {
-    if (id == 'bg') {
-        document.getElementById('bg').style.display = "block";
-        document.getElementById('bg2').style.display = "none";
-        document.getElementById('bg3').style.display = "none";
-        document.getElementById('bg4').style.display = "none";
-    } else if (id == 'bg2') {
-        document.getElementById('bg').style.display = "none";
-        document.getElementById('bg2').style.display = "block";
-        document.getElementById('bg3').style.display = "none";
-        document.getElementById('bg4').style.display = "none";
-    } else if (id == 'bg3') {
-        document.getElementById('bg').style.display = "none";
-        document.getElementById('bg2').style.display = "none";
-        document.getElementById('bg3').style.display = "block";
-        document.getElementById('bg4').style.display = "none";
-    } else {
-        document.getElementById('bg').style.display = "none";
-        document.getElementById('bg2').style.display = "none";
-        document.getElementById('bg3').style.display = "none";
-        document.getElementById('bg4').style.display = "block";
-    }
-}}
-=======
 window.onload = function() {
     requiereCohorts();
 };
@@ -119,12 +54,12 @@ async function poblarTabla(users) {
         }
         completitudTotalUser = Math.round((users[i].stats.exercises.percent + users[i].stats.reads.percent + users[i].stats.quizzes.percent) / 3);
         userList.appendChild(newStudent);
-        createElement(newStudent, 'h4', users[i].name, 'col-md-2');
-        createElement(newStudent, 'h4', completitudTotalUser + ' % ', 'col-md-2');
-        createElement(newStudent, 'h4', users[i].stats.exercises.percent + ' % ', 'col-md-2');
-        createElement(newStudent, 'h4', users[i].stats.quizzes.scoreAvg, 'col-md-2');
-        createElement(newStudent, 'h4', users[i].stats.quizzes.percent + ' % ', 'col-md-2');
-        createElement(newStudent, 'h4', users[i].stats.reads.percent + ' % ', 'col-md-2');
+        createElement(newStudent, 'h6', users[i].name, 'col-md-2');
+        createElement(newStudent, 'h6', completitudTotalUser + ' % ', 'col-md-2');
+        createElement(newStudent, 'h6', users[i].stats.exercises.percent + ' % ', 'col-md-2');
+        createElement(newStudent, 'h6', users[i].stats.quizzes.scoreAvg, 'col-md-2');
+        createElement(newStudent, 'h6', users[i].stats.quizzes.percent + ' % ', 'col-md-2');
+        createElement(newStudent, 'h6', users[i].stats.reads.percent + ' % ', 'col-md-2');
     }
     function createElement(parent, element, text, clase) {
         const newElement = document.createElement(element);
