@@ -7,10 +7,17 @@ Promise.all ([
             return Response.json();
     }));
     }  
-    ).then (ResponseJsons) 
-   ResponseJsons.array.forEach(element => {
-       console.log(element)
-   });     
+    ).then((ResponseJsons) => {	//tengo toda la informacion en responsejsons
+         //console.log(ResponseJsons);
+        let alumnas = ResponseJsons[0];//entramos al array de users
+        //console.log(alumnas);
+        for (let i= 0; i < alumnas.length; ++i){
+            let usersId = alumnas[i].id;
+            console.log(usersId);
+        } 
+        })	
+        
+        
       
    
     
